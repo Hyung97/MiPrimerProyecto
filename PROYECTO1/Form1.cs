@@ -27,7 +27,7 @@ namespace PROYECTO1
             sbyte NUM1 = sbyte.Parse(txt1.Text);
             sbyte NUM2 = sbyte.Parse(txt2.Text);
             lblAnswer.Text = "RESPUESTA: " + (NUM1 + NUM2);
-            //HGK
+            
         }
     }
 }
