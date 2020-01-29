@@ -36,6 +36,12 @@
             this.lblNum2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblAnswer = new System.Windows.Forms.Label();
+            this.grbOperaciones = new System.Windows.Forms.GroupBox();
+            this.optSuma = new System.Windows.Forms.RadioButton();
+            this.optResta = new System.Windows.Forms.RadioButton();
+            this.optMulti = new System.Windows.Forms.RadioButton();
+            this.optDivi = new System.Windows.Forms.RadioButton();
+            this.grbOperaciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPro
@@ -43,7 +49,7 @@
             this.btnPro.BackColor = System.Drawing.Color.MediumPurple;
             this.btnPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPro.ForeColor = System.Drawing.Color.White;
-            this.btnPro.Location = new System.Drawing.Point(43, 176);
+            this.btnPro.Location = new System.Drawing.Point(38, 185);
             this.btnPro.Name = "btnPro";
             this.btnPro.Size = new System.Drawing.Size(156, 32);
             this.btnPro.TabIndex = 0;
@@ -99,7 +105,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(33, 84);
+            this.label3.Location = new System.Drawing.Point(33, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 25);
             this.label3.TabIndex = 5;
@@ -117,13 +123,79 @@
             this.lblAnswer.TabIndex = 6;
             this.lblAnswer.Text = "RESPUESTA: ¿?";
             // 
+            // grbOperaciones
+            // 
+            this.grbOperaciones.BackColor = System.Drawing.Color.Transparent;
+            this.grbOperaciones.Controls.Add(this.optDivi);
+            this.grbOperaciones.Controls.Add(this.optMulti);
+            this.grbOperaciones.Controls.Add(this.optResta);
+            this.grbOperaciones.Controls.Add(this.optSuma);
+            this.grbOperaciones.Location = new System.Drawing.Point(265, 22);
+            this.grbOperaciones.Name = "grbOperaciones";
+            this.grbOperaciones.Size = new System.Drawing.Size(157, 158);
+            this.grbOperaciones.TabIndex = 7;
+            this.grbOperaciones.TabStop = false;
+            this.grbOperaciones.Text = "OPERACIONES";
+            this.grbOperaciones.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // optSuma
+            // 
+            this.optSuma.AutoSize = true;
+            this.optSuma.Checked = true;
+            this.optSuma.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optSuma.ForeColor = System.Drawing.Color.Black;
+            this.optSuma.Location = new System.Drawing.Point(6, 31);
+            this.optSuma.Name = "optSuma";
+            this.optSuma.Size = new System.Drawing.Size(69, 22);
+            this.optSuma.TabIndex = 0;
+            this.optSuma.TabStop = true;
+            this.optSuma.Text = "SUMA";
+            this.optSuma.UseVisualStyleBackColor = true;
+            // 
+            // optResta
+            // 
+            this.optResta.AutoSize = true;
+            this.optResta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optResta.ForeColor = System.Drawing.Color.Black;
+            this.optResta.Location = new System.Drawing.Point(6, 59);
+            this.optResta.Name = "optResta";
+            this.optResta.Size = new System.Drawing.Size(75, 22);
+            this.optResta.TabIndex = 1;
+            this.optResta.Text = "RESTA";
+            this.optResta.UseVisualStyleBackColor = true;
+            // 
+            // optMulti
+            // 
+            this.optMulti.AutoSize = true;
+            this.optMulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optMulti.ForeColor = System.Drawing.Color.Black;
+            this.optMulti.Location = new System.Drawing.Point(6, 87);
+            this.optMulti.Name = "optMulti";
+            this.optMulti.Size = new System.Drawing.Size(148, 22);
+            this.optMulti.TabIndex = 2;
+            this.optMulti.Text = "MULTIPLICACION";
+            this.optMulti.UseVisualStyleBackColor = true;
+            // 
+            // optDivi
+            // 
+            this.optDivi.AutoSize = true;
+            this.optDivi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optDivi.ForeColor = System.Drawing.Color.Black;
+            this.optDivi.Location = new System.Drawing.Point(6, 115);
+            this.optDivi.Name = "optDivi";
+            this.optDivi.Size = new System.Drawing.Size(88, 22);
+            this.optDivi.TabIndex = 3;
+            this.optDivi.Text = "DIVISION";
+            this.optDivi.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(378, 261);
+            this.ClientSize = new System.Drawing.Size(470, 252);
+            this.Controls.Add(this.grbOperaciones);
             this.Controls.Add(this.lblAnswer);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblNum2);
@@ -134,6 +206,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.grbOperaciones.ResumeLayout(false);
+            this.grbOperaciones.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +222,11 @@
         private System.Windows.Forms.Label lblNum2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblAnswer;
+        private System.Windows.Forms.GroupBox grbOperaciones;
+        private System.Windows.Forms.RadioButton optDivi;
+        private System.Windows.Forms.RadioButton optMulti;
+        private System.Windows.Forms.RadioButton optResta;
+        private System.Windows.Forms.RadioButton optSuma;
     }
 }
 

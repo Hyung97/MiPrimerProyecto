@@ -26,7 +26,29 @@ namespace PROYECTO1
         {
             sbyte NUM1 = sbyte.Parse(txt1.Text);
             sbyte NUM2 = sbyte.Parse(txt2.Text);
-            lblAnswer.Text = "RESPUESTA: " + (NUM1 + NUM2);
+            int RESP = 0;
+            if (optSuma.Checked)
+            {
+                RESP = NUM1 + NUM2;
+            }
+            if (optResta.Checked)
+            {
+                RESP = NUM1 - NUM2;
+            }
+            if (optMulti.Checked)
+            {
+               RESP = NUM1 * NUM2;
+            }
+            if (optDivi.Checked)
+            {
+                RESP = NUM1 / NUM2;
+            }
+            lblAnswer.Text = "Respuesta: " + RESP;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
